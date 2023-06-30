@@ -12,7 +12,7 @@ function App() {
   }, [menu])
 
   return (
-    <div className={menu ? "App hidden" : "App"}>
+    <div className='App'>
       < Menu  menu={menu} setMenu={setMenu}/>
       < Navbar menu={menu} setMenu={setMenu}/>
       < Main />

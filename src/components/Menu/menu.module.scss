@@ -32,6 +32,13 @@
         margin-top: 72px;
         margin-left: 24px;
         font-size: 18px;
+        span{
+            cursor: pointer;
+            transition: .2s ease all;
+            &:hover{
+                color: $soft-red;
+            }
+        }
     }
     .close{
         display: flex;
