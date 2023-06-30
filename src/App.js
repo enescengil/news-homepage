@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+//COMPONENTS  
+import Navbar from './components/Navbar'
+import Main from './components/Main'
+import Menu from './components/Menu'
+import { useEffect, useState } from 'react';
 
 function App() {
+
+  const [menu, setMenu] = useState(false)
+  useEffect(() => {
+    menu ? document.body.style.overflowY = 'hidden' : document.body.style.overflowY = '' 
+  }, [menu])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={menu ? "App hidden" : "App"}>
+      < Menu  menu={menu} setMenu={setMenu}/>
+      < Navbar menu={menu} setMenu={setMenu}/>
+      < Main />
     </div>
   );
 }

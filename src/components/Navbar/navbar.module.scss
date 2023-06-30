@@ -1,0 +1,33 @@
+@import '../../styles/variables';
+
+.header{
+   display: flex; 
+   justify-content: space-between;
+   align-items: center;
+   padding: 40px 20px;
+   nav{
+      display: none;
+   }
+   
+}
+
+@media only screen and (min-width: 864px){
+   .header{
+      padding: 75px 0px;
+   }
+   nav{
+      display: flex!important ;
+      gap: 56px;
+      color: $dark-grayish-blue;
+      span{
+         transition: .2s ease all;
+         cursor: pointer;
+         &:hover{
+            color: $soft-red;
+         }
+      }
+     }
+     .menu_btn{
+      display: none;
+     }
+}

@@ -1,0 +1,173 @@
+@import '../../styles/_variables';
+
+.wrapper{
+    justify-content: center;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    .left_side{
+        margin-bottom: 60px;
+        .text_wrapper{
+            margin-top: 20px;
+            .title{
+                font-size: 56px;
+                font-weight: 800;
+            }
+            .text{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                line-height: 25px;
+                color: $dark-grayish-blue;
+                margin-top: 20px;
+                .btn{
+                    background-color: $soft-red;
+                    padding: 17px 30px;
+                    display: inline-block;
+                    font-weight: 700;
+                    color: $off-white;
+                    letter-spacing: 3px;
+                    cursor: pointer;
+                    user-select: none;
+                    margin-top: 20px;
+                    transition: .2s ease all;
+                    &:hover{
+                        background-color: $very-dark-blue;
+                    }
+                }
+            }
+        }
+
+    }   
+    .right_side_wrapper{
+        flex: 1;
+        background-color: $very-dark-blue;
+        padding: 25px 0px;
+        .right_side{
+            padding: 0 30px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .sidebar_title{
+            color: $soft-orange;
+            font-size: 56px;
+            font-weight: 700;
+            padding: 15px 0;
+
+        }
+        .news_wrapper{
+            .news{
+                border-bottom: 1px solid $dark-grayish-blue;
+                &:last-child{
+                    border-bottom: none;
+                }
+                .news_title{
+                    padding-top: 30px;
+                    span{
+                        color: $off-white;
+                        font-size: 20px;
+                        font-weight: 700;
+                        transition: .2s ease all;
+                        cursor: pointer;
+                        &:hover{
+                            color: $soft-orange;
+                        }
+                    }
+                }
+                .news_description{
+                    color: $grayish-blue;
+                    line-height: 24px;
+                    font-size: 16px;
+                    padding: 25px 0;
+                }
+            }
+        }
+    }
+}
+.articles{
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    .article{
+        display: flex;
+        margin: 40px 0;
+        gap: 18px;
+        .article_number{
+            color: $grayish-blue;
+            font-weight: 700;
+            font-size: 32px;
+        }
+        img{
+            max-width: 105px;
+        }
+        .article_title{
+            padding: 20px 0;
+            font-size: 18px;
+            font-weight: 800;
+            transition: .2s ease all;
+            cursor: pointer;
+            display: inline-block;
+            &:hover{
+                color: $soft-red;
+            }
+        }
+        .article_text{
+            line-height: 22px;
+            color: $dark-grayish-blue;
+        }
+    }
+}
+
+@media only screen and (min-width: 864px) {
+    .wrapper{
+        max-width: 100%;
+        display: flex;
+        gap: 36px;
+        .left_side{
+            flex: 2;
+            margin-bottom: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .text_wrapper{
+                display: flex;
+                .title{
+                    font-size: 64px;
+                    font-weight: 800;
+                }
+                .text{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    line-height: 25px;
+                    color: $dark-grayish-blue;
+                    .btn{
+                        background-color: $soft-red;
+                        padding: 17px 30px;
+                        display: inline-block;
+                        font-weight: 700;
+                        color: $off-white;
+                        letter-spacing: 3px;
+                        cursor: pointer;
+                        user-select: none;
+                        transition: .2s ease all;
+                        &:hover{
+                            background-color: $very-dark-blue;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+    .articles{
+        max-width: 100%;
+        display: flex;
+        margin-top: 96px;
+        margin-bottom: 32px;
+        gap: 18px;
+    }
+}
